@@ -1,0 +1,224 @@
+
+Now using project "dpgwq" on server "https://master.paas-test.eubrmb.com:8443".
+
+XZ util found:
+
+~~~
+xz (XZ Utils) 5.2.2
+liblzma 5.2.2
+~~~
+
+
+NOTE: A temporary directory will be created in order to store the information about the 3scale dump: ./3scale-dump
+
+Press [ENTER] to continue or <Ctrl + C> to abort...
+
+	mkdir: created directory ‘./3scale-dump’
+	mkdir: created directory ‘./3scale-dump/status’
+	mkdir: created directory ‘./3scale-dump/status/apicast-staging’
+	mkdir: created directory ‘./3scale-dump/status/apicast-production’
+
+1. Fetch: All pods and Events
+
+
+2. Fetch: DeploymentConfig
+
+	mkdir: created directory ‘./3scale-dump/dc’
+	Skipping: dpgw01q-production
+	Skipping: dpgw01q-staging
+
+3. Fetch: Logs
+
+	mkdir: created directory ‘./3scale-dump/logs’
+	Skipping: dpgw01q-production-1-hnhv6
+	Skipping: dpgw01q-staging-1-d2s5p
+
+4. Fetch: Secrets
+
+	mkdir: created directory ‘./3scale-dump/secrets’
+
+5. Fetch: Routes
+
+	mkdir: created directory ‘./3scale-dump/routes’
+
+6. Fetch: Services
+
+	mkdir: created directory ‘./3scale-dump/services’
+
+7. Fetch: Image Streams
+
+	mkdir: created directory ‘./3scale-dump/images’
+No resources found.
+
+8. Fetch: ConfigMaps
+
+	mkdir: created directory ‘./3scale-dump/configmaps’
+No resources found.
+
+9. Fetch: PV
+
+	mkdir: created directory ‘./3scale-dump/pv’
+	mkdir: created directory ‘./3scale-dump/pv/describe’
+
+10. Fetch: PVC
+
+	mkdir: created directory ‘./3scale-dump/pvc’
+No resources found.
+	mkdir: created directory ‘./3scale-dump/pvc/describe’
+No resources found.
+
+11. Fetch: ServiceAccounts
+
+	mkdir: created directory ‘./3scale-dump/serviceaccounts’
+
+12. Status: Node
+
+	APICAST_POD_PRD: 
+	APICAST_POD_STG: 
+	MGMT_API_PRD: 
+	MGMT_API_STG: 
+	APICAST_ROUTE_PRD: 
+	APICAST_ROUTE_STG: 
+	WILDCARD POD: 
+	THREESCALE_PORTAL_ENDPOINT: 
+	SYSTEM_APP_POD: 
+
+13. Status: 3scale Echo API
+
+14. Status: Staging/Production Backend JSON
+
+15. Status: Management API
+
+16. Status: APIcast Certificates
+
+17. Status: Project and Pods 'runAsUser'
+
+18. Status: Sidekiq Queue (might take up to 3 minutes)
+
+# Compacting... #
+
+
+# Cleanup... #
+
+		removed ‘./3scale-dump/status/apicast-staging/python-json.sh’
+		
+
+	rmdir: removing directory, ‘./3scale-dump/status/apicast-staging’
+
+		removed ‘./3scale-dump/status/apicast-production/python-json.sh’
+		
+
+	rmdir: removing directory, ‘./3scale-dump/status/apicast-production’
+
+		removed ‘./3scale-dump/status/events.txt’
+		removed ‘./3scale-dump/status/node.txt’
+		removed ‘./3scale-dump/status/ocp-version.txt’
+		removed ‘./3scale-dump/status/pods-all.txt’
+		removed ‘./3scale-dump/status/pods-run-as-user.txt’
+		removed ‘./3scale-dump/status/pods.txt’
+		removed ‘./3scale-dump/status/project.txt’
+		removed ‘./3scale-dump/status/pvc.txt’
+		removed ‘./3scale-dump/status/pv.txt’
+
+	rmdir: removing directory, ‘./3scale-dump/status’
+
+		
+
+	rmdir: removing directory, ‘./3scale-dump/dc’
+
+		removed ‘./3scale-dump/logs/uncompress-logs.sh’
+		
+
+	rmdir: removing directory, ‘./3scale-dump/logs’
+
+		removed ‘./3scale-dump/secrets/apicast-configuration-url-secret.yaml’
+		removed ‘./3scale-dump/secrets/builder-dockercfg-z7ftt.yaml’
+		removed ‘./3scale-dump/secrets/builder-token-82jfz.yaml’
+		removed ‘./3scale-dump/secrets/builder-token-n7hj2.yaml’
+		removed ‘./3scale-dump/secrets/default-dockercfg-58nc9.yaml’
+		removed ‘./3scale-dump/secrets/default-token-b4j5r.yaml’
+		removed ‘./3scale-dump/secrets/default-token-lc24d.yaml’
+		removed ‘./3scale-dump/secrets/deployer-dockercfg-wpgf7.yaml’
+		removed ‘./3scale-dump/secrets/deployer-token-n6zbg.yaml’
+		removed ‘./3scale-dump/secrets/deployer-token-ztkcf.yaml’
+
+	rmdir: removing directory, ‘./3scale-dump/secrets’
+
+		removed ‘./3scale-dump/routes/dpgw01q-production.yaml’
+		removed ‘./3scale-dump/routes/dpgw01q-staging.yaml’
+
+	rmdir: removing directory, ‘./3scale-dump/routes’
+
+		removed ‘./3scale-dump/services/dpgw01q-production.yaml’
+		removed ‘./3scale-dump/services/dpgw01q-staging.yaml’
+
+	rmdir: removing directory, ‘./3scale-dump/services’
+
+		
+
+	rmdir: removing directory, ‘./3scale-dump/images’
+
+		
+
+	rmdir: removing directory, ‘./3scale-dump/configmaps’
+
+		removed ‘./3scale-dump/pv/describe/default-internal-registry-pv.txt’
+		removed ‘./3scale-dump/pv/describe/gw-backend-redis-pv.txt’
+		removed ‘./3scale-dump/pv/describe/gw-system-mysql-pv.txt’
+		removed ‘./3scale-dump/pv/describe/gw-system-pv.txt’
+		removed ‘./3scale-dump/pv/describe/gw-system-redis-pv.txt’
+		removed ‘./3scale-dump/pv/describe/openshift-infra-metrics-cassandra-pv.txt’
+		removed ‘./3scale-dump/pv/describe/openshift-logging-elasticsearch-pv.txt’
+		removed ‘./3scale-dump/pv/describe/openshift-monitoring-alert-pv1.txt’
+		removed ‘./3scale-dump/pv/describe/openshift-monitoring-alert-pv2.txt’
+		removed ‘./3scale-dump/pv/describe/openshift-monitoring-alert-pv3.txt’
+		removed ‘./3scale-dump/pv/describe/openshift-monitoring-prometheus-pv1.txt’
+		removed ‘./3scale-dump/pv/describe/openshift-monitoring-prometheus-pv2.txt’
+		removed ‘./3scale-dump/pv/describe/sso-sso-cert-pv.txt’
+		removed ‘./3scale-dump/pv/describe/sso-sso-pv.txt’
+
+	rmdir: removing directory, ‘./3scale-dump/pv/describe’
+
+		removed ‘./3scale-dump/pv/describe.txt’
+		removed ‘./3scale-dump/pv/default-internal-registry-pv.yaml’
+		removed ‘./3scale-dump/pv/gw-backend-redis-pv.yaml’
+		removed ‘./3scale-dump/pv/gw-system-mysql-pv.yaml’
+		removed ‘./3scale-dump/pv/gw-system-pv.yaml’
+		removed ‘./3scale-dump/pv/gw-system-redis-pv.yaml’
+		removed ‘./3scale-dump/pv/openshift-infra-metrics-cassandra-pv.yaml’
+		removed ‘./3scale-dump/pv/openshift-logging-elasticsearch-pv.yaml’
+		removed ‘./3scale-dump/pv/openshift-monitoring-alert-pv1.yaml’
+		removed ‘./3scale-dump/pv/openshift-monitoring-alert-pv2.yaml’
+		removed ‘./3scale-dump/pv/openshift-monitoring-alert-pv3.yaml’
+		removed ‘./3scale-dump/pv/openshift-monitoring-prometheus-pv1.yaml’
+		removed ‘./3scale-dump/pv/openshift-monitoring-prometheus-pv2.yaml’
+		removed ‘./3scale-dump/pv/sso-sso-cert-pv.yaml’
+		removed ‘./3scale-dump/pv/sso-sso-pv.yaml’
+
+	rmdir: removing directory, ‘./3scale-dump/pv’
+
+		
+
+	rmdir: removing directory, ‘./3scale-dump/pvc/describe’
+
+		
+
+	rmdir: removing directory, ‘./3scale-dump/pvc’
+
+		removed ‘./3scale-dump/serviceaccounts/builder.yaml’
+		removed ‘./3scale-dump/serviceaccounts/default.yaml’
+		removed ‘./3scale-dump/serviceaccounts/deployer.yaml’
+
+	rmdir: removing directory, ‘./3scale-dump/serviceaccounts’
+
+		removed ‘./3scale-dump/pv.yaml’
+		removed ‘./3scale-dump/routes.yaml’
+		removed ‘./3scale-dump/secrets.yaml’
+		removed ‘./3scale-dump/serviceaccounts.yaml’
+		removed ‘./3scale-dump/services.yaml’
+
+	rmdir: removing directory, ‘./3scale-dump’
+
+
+File created: ./3scale-dump-2019-09-27_02-59.tar
+
