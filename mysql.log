@@ -1,0 +1,238 @@
+=> sourcing 20-validate-variables.sh ...
+=> sourcing 25-validate-replication-variables.sh ...
+=> sourcing 30-base-config.sh ...
+---> 09:20:04     Processing basic MySQL configuration files ...
+=> sourcing 60-replication-config.sh ...
+=> sourcing 70-s2i-config.sh ...
+---> 09:20:04     Processing additional arbitrary  MySQL configuration provided by s2i ...
+=> sourcing 10-mysql57.cnf ...
+=> sourcing 40-paas.cnf ...
+=> sourcing 50-my-tuning.cnf ...
+---> 09:20:04     Starting MySQL server with disabled networking ...
+---> 09:20:04     Waiting for MySQL to start ...
+2019-09-30T09:20:04.391794Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2019-09-30T09:20:04.402873Z 0 [Note] /opt/rh/rh-mysql57/root/usr/libexec/mysqld (mysqld 5.7.24) starting as process 28 ...
+2019-09-30T09:20:04.447268Z 0 [Note] InnoDB: PUNCH HOLE support available
+2019-09-30T09:20:04.447314Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2019-09-30T09:20:04.447320Z 0 [Note] InnoDB: Uses event mutexes
+2019-09-30T09:20:04.447324Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2019-09-30T09:20:04.447328Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.7
+2019-09-30T09:20:04.447334Z 0 [Note] InnoDB: Using Linux native AIO
+2019-09-30T09:20:04.447711Z 0 [Note] InnoDB: Number of pools: 1
+2019-09-30T09:20:04.447865Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2019-09-30T09:20:04.450216Z 0 [Note] InnoDB: Initializing buffer pool, total size = 1G, instances = 8, chunk size = 128M
+2019-09-30T09:20:04.521832Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2019-09-30T09:20:04.538561Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2019-09-30T09:20:04.646040Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-09-30T09:20:04.666835Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 21579436
+2019-09-30T09:20:04.666866Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 21579445
+2019-09-30T09:20:04.666874Z 0 [Note] InnoDB: Database was not shutdown normally!
+2019-09-30T09:20:04.666879Z 0 [Note] InnoDB: Starting crash recovery.
+---> 09:20:05     Waiting for MySQL to start ...
+2019-09-30T09:20:05.548638Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-09-30T09:20:05.548679Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2019-09-30T09:20:05.577221Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2019-09-30T09:20:05.614739Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2019-09-30T09:20:05.623839Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2019-09-30T09:20:05.623868Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2019-09-30T09:20:05.624281Z 0 [Note] InnoDB: Waiting for purge to start
+2019-09-30T09:20:05.680293Z 0 [Note] InnoDB: 5.7.24 started; log sequence number 21579445
+2019-09-30T09:20:05.680710Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2019-09-30T09:20:05.681307Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/data/ib_buffer_pool
+2019-09-30T09:20:05.740413Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2019-09-30T09:20:05.740441Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2019-09-30T09:20:05.752057Z 0 [Warning] CA certificate ca.pem is self signed.
+2019-09-30T09:20:05.754637Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2019-09-30T09:20:05.761564Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/lib/mysql/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2019-09-30T09:20:05.796964Z 0 [Warning] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:05.797028Z 0 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:05.797040Z 0 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:05.797080Z 0 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:05.797088Z 0 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:05.797105Z 0 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:05.851621Z 0 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:05.851658Z 0 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:05.921987Z 0 [Note] InnoDB: Buffer pool(s) load completed at 190930  9:20:05
+2019-09-30T09:20:06.076837Z 0 [Note] Event Scheduler: Loaded 0 events
+2019-09-30T09:20:06.077187Z 0 [Note] /opt/rh/rh-mysql57/root/usr/libexec/mysqld: ready for connections.
+Version: '5.7.24'  socket: '/tmp/mysql.sock'  port: 0  MySQL Community Server (GPL)
+---> 09:20:06     MySQL started successfully
+=> sourcing 40-datadir-action.sh ...
+---> 09:20:06     Running datadir action: upgrade-warn
+---> 09:20:06     MySQL server version check passed, both server and data directory are version 5.7.
+=> sourcing 50-passwd-change.sh ...
+---> 09:20:06     Setting passwords ...
+2019-09-30T09:20:06.313747Z 5 [Warning] Following users were specified in CREATE USER IF NOT EXISTS but they already exist. Corresponding entry in binary log used default authentication plugin 'mysql_native_password' to rewrite authentication information(if any) for them: 'root'@'%'
+
+---> 09:20:06     Shutting down MySQL ...
+2019-09-30T09:20:06.332720Z 6 [Warning] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:06.332757Z 6 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:06.332767Z 6 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:06.332797Z 6 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:06.332804Z 6 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:06.332817Z 6 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:06.335094Z 6 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:06.335114Z 6 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:06.339902Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2019-09-30T09:20:06.339928Z 0 [Note] Shutting down slave threads
+2019-09-30T09:20:06.339936Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2019-09-30T09:20:06.339944Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2019-09-30T09:20:06.340067Z 0 [Note] Binlog end
+2019-09-30T09:20:06.357382Z 0 [Note] Shutting down plugin 'ngram'
+2019-09-30T09:20:06.357409Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2019-09-30T09:20:06.357416Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2019-09-30T09:20:06.357419Z 0 [Note] Shutting down plugin 'partition'
+2019-09-30T09:20:06.357422Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2019-09-30T09:20:06.357426Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-09-30T09:20:06.357429Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-09-30T09:20:06.357432Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-09-30T09:20:06.357435Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-09-30T09:20:06.357439Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-09-30T09:20:06.357442Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-09-30T09:20:06.357445Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-09-30T09:20:06.357448Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-09-30T09:20:06.357451Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-09-30T09:20:06.357454Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-09-30T09:20:06.357457Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-09-30T09:20:06.357460Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-09-30T09:20:06.357471Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-09-30T09:20:06.357474Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-09-30T09:20:06.357477Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-09-30T09:20:06.357480Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-09-30T09:20:06.357483Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2019-09-30T09:20:06.357487Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-09-30T09:20:06.357490Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-09-30T09:20:06.357493Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-09-30T09:20:06.357496Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-09-30T09:20:06.357499Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-09-30T09:20:06.357502Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-09-30T09:20:06.357505Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-09-30T09:20:06.357508Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-09-30T09:20:06.357511Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2019-09-30T09:20:06.357514Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-09-30T09:20:06.357517Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-09-30T09:20:06.357520Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2019-09-30T09:20:06.357523Z 0 [Note] Shutting down plugin 'InnoDB'
+2019-09-30T09:20:06.357584Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2019-09-30T09:20:06.357908Z 0 [Note] InnoDB: Starting shutdown...
+2019-09-30T09:20:06.458208Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/data/ib_buffer_pool
+2019-09-30T09:20:06.470923Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 190930  9:20:06
+2019-09-30T09:20:07.551895Z 0 [Note] InnoDB: Shutdown completed; log sequence number 21579542
+2019-09-30T09:20:07.556036Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-09-30T09:20:07.556067Z 0 [Note] Shutting down plugin 'MEMORY'
+2019-09-30T09:20:07.556074Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-09-30T09:20:07.556085Z 0 [Note] Shutting down plugin 'MyISAM'
+2019-09-30T09:20:07.556097Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-09-30T09:20:07.556152Z 0 [Note] Shutting down plugin 'CSV'
+2019-09-30T09:20:07.556157Z 0 [Note] Shutting down plugin 'sha256_password'
+2019-09-30T09:20:07.556160Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2019-09-30T09:20:07.556326Z 0 [Note] Shutting down plugin 'binlog'
+2019-09-30T09:20:07.576280Z 0 [Note] /opt/rh/rh-mysql57/root/usr/libexec/mysqld: Shutdown complete
+
+---> 09:20:08     Cleaning up environment variables MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE and MYSQL_ROOT_PASSWORD ...
+---> 09:20:08     Running final exec -- Only MySQL server logs after this point
+2019-09-30T09:20:08.550169Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2019-09-30T09:20:08.560978Z 0 [Note] /opt/rh/rh-mysql57/root/usr/libexec/mysqld (mysqld 5.7.24) starting as process 1 ...
+2019-09-30T09:20:08.606028Z 0 [Note] InnoDB: PUNCH HOLE support available
+2019-09-30T09:20:08.606072Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2019-09-30T09:20:08.606078Z 0 [Note] InnoDB: Uses event mutexes
+2019-09-30T09:20:08.606086Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2019-09-30T09:20:08.606090Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.7
+2019-09-30T09:20:08.606096Z 0 [Note] InnoDB: Using Linux native AIO
+2019-09-30T09:20:08.606474Z 0 [Note] InnoDB: Number of pools: 1
+2019-09-30T09:20:08.606652Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2019-09-30T09:20:08.609120Z 0 [Note] InnoDB: Initializing buffer pool, total size = 1G, instances = 8, chunk size = 128M
+2019-09-30T09:20:08.687320Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2019-09-30T09:20:08.704858Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2019-09-30T09:20:08.792156Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-09-30T09:20:09.152744Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2019-09-30T09:20:09.157803Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2019-09-30T09:20:09.197580Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2019-09-30T09:20:09.204805Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2019-09-30T09:20:09.204828Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2019-09-30T09:20:09.205331Z 0 [Note] InnoDB: Waiting for purge to start
+2019-09-30T09:20:09.257682Z 0 [Note] InnoDB: 5.7.24 started; log sequence number 21579542
+2019-09-30T09:20:09.258052Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2019-09-30T09:20:09.259083Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/data/ib_buffer_pool
+2019-09-30T09:20:09.314546Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2019-09-30T09:20:09.314577Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2019-09-30T09:20:09.324359Z 0 [Warning] CA certificate ca.pem is self signed.
+2019-09-30T09:20:09.325734Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2019-09-30T09:20:09.331355Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2019-09-30T09:20:09.331443Z 0 [Note] IPv6 is available.
+2019-09-30T09:20:09.331454Z 0 [Note]   - '::' resolves to '::';
+2019-09-30T09:20:09.331486Z 0 [Note] Server socket created on IP: '::'.
+2019-09-30T09:20:09.333714Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/lib/mysql/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2019-09-30T09:20:09.399801Z 0 [Warning] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:09.399862Z 0 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:09.399874Z 0 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:09.399914Z 0 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:09.399922Z 0 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:09.399938Z 0 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:09.460213Z 0 [Note] InnoDB: Buffer pool(s) load completed at 190930  9:20:09
+2019-09-30T09:20:09.500496Z 0 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:09.500534Z 0 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2019-09-30T09:20:09.712836Z 0 [Note] Event Scheduler: Loaded 0 events
+2019-09-30T09:20:09.713229Z 0 [Note] /opt/rh/rh-mysql57/root/usr/libexec/mysqld: ready for connections.
+Version: '5.7.24'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+2019-09-30T09:20:42.424515Z 5 [Note] Got an error reading communication packets
+2019-09-30T09:20:52.424165Z 8 [Note] Got an error reading communication packets
+2019-09-30T09:20:53.616971Z 9 [Note] Aborted connection 9 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:20:53.927026Z 7 [Note] Aborted connection 7 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:21:02.424023Z 11 [Note] Got an error reading communication packets
+2019-09-30T09:21:12.433892Z 12 [Note] Got an error reading communication packets
+2019-09-30T09:21:22.431916Z 14 [Note] Got an error reading communication packets
+2019-09-30T09:21:32.429840Z 16 [Note] Got an error reading communication packets
+2019-09-30T09:21:42.434649Z 19 [Note] Got an error reading communication packets
+2019-09-30T09:21:52.433880Z 23 [Note] Got an error reading communication packets
+2019-09-30T09:22:02.430346Z 25 [Note] Got an error reading communication packets
+2019-09-30T09:22:12.429347Z 28 [Note] Got an error reading communication packets
+2019-09-30T09:22:22.424632Z 29 [Note] Got an error reading communication packets
+2019-09-30T09:22:32.424408Z 31 [Note] Got an error reading communication packets
+2019-09-30T09:22:33.654450Z 21 [Note] Aborted connection 21 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:22:34.641508Z 20 [Note] Aborted connection 20 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:22:35.619252Z 22 [Note] Aborted connection 22 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:22:42.423959Z 34 [Note] Got an error reading communication packets
+2019-09-30T09:22:52.423919Z 35 [Note] Got an error reading communication packets
+2019-09-30T09:22:55.627370Z 3 [Note] Aborted connection 3 to db: 'system' user: 'root' host: '10.128.2.1' (Got an error reading communication packets)
+2019-09-30T09:22:55.640252Z 18 [Note] Aborted connection 18 to db: 'system' user: 'root' host: '10.128.2.1' (Got an error reading communication packets)
+2019-09-30T09:22:55.658533Z 6 [Note] Aborted connection 6 to db: 'system' user: 'root' host: '10.128.2.1' (Got an error reading communication packets)
+2019-09-30T09:22:55.660244Z 17 [Note] Aborted connection 17 to db: 'system' user: 'root' host: '10.128.2.1' (Got an error reading communication packets)
+2019-09-30T09:22:55.661812Z 4 [Note] Aborted connection 4 to db: 'system' user: 'root' host: '10.128.2.1' (Got an error reading communication packets)
+2019-09-30T09:22:55.699157Z 13 [Note] Aborted connection 13 to db: 'system' user: 'root' host: '10.128.2.1' (Got an error reading communication packets)
+2019-09-30T09:23:02.424069Z 38 [Note] Got an error reading communication packets
+2019-09-30T09:23:12.424181Z 39 [Note] Got an error reading communication packets
+2019-09-30T09:23:22.424088Z 40 [Note] Got an error reading communication packets
+2019-09-30T09:23:32.424157Z 44 [Note] Got an error reading communication packets
+2019-09-30T09:23:33.539003Z 45 [Note] Aborted connection 45 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:23:33.918540Z 42 [Note] Aborted connection 42 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:23:39.519273Z 33 [Note] Aborted connection 33 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:23:39.521419Z 54 [Note] Aborted connection 54 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:23:39.522714Z 36 [Note] Aborted connection 36 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:23:39.522844Z 41 [Note] Aborted connection 41 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:23:39.538650Z 32 [Note] Aborted connection 32 to db: 'system' user: 'root' host: '10.131.2.1' (Got an error reading communication packets)
+2019-09-30T09:23:42.423957Z 55 [Note] Got an error reading communication packets
+2019-09-30T09:23:52.423903Z 56 [Note] Got an error reading communication packets
+2019-09-30T09:24:02.423920Z 58 [Note] Got an error reading communication packets
+2019-09-30T09:24:12.423952Z 59 [Note] Got an error reading communication packets
+2019-09-30T09:24:22.423971Z 60 [Note] Got an error reading communication packets
+2019-09-30T09:24:32.423951Z 62 [Note] Got an error reading communication packets
+2019-09-30T09:24:42.423894Z 63 [Note] Got an error reading communication packets
+2019-09-30T09:24:52.424381Z 64 [Note] Got an error reading communication packets
+2019-09-30T09:25:02.423913Z 66 [Note] Got an error reading communication packets
+2019-09-30T09:25:12.423999Z 67 [Note] Got an error reading communication packets
+2019-09-30T09:25:22.423905Z 68 [Note] Got an error reading communication packets
+2019-09-30T09:25:32.423903Z 70 [Note] Got an error reading communication packets
+2019-09-30T09:25:42.424104Z 71 [Note] Got an error reading communication packets
+2019-09-30T09:25:52.424062Z 72 [Note] Got an error reading communication packets
+2019-09-30T09:26:02.423895Z 74 [Note] Got an error reading communication packets
+2019-09-30T09:26:12.424006Z 75 [Note] Got an error reading communication packets
+2019-09-30T09:26:22.423921Z 76 [Note] Got an error reading communication packets
+2019-09-30T09:26:32.424036Z 78 [Note] Got an error reading communication packets
+2019-09-30T09:26:42.423899Z 79 [Note] Got an error reading communication packets
+2019-09-30T09:26:52.423954Z 80 [Note] Got an error reading communication packets
+2019-09-30T09:27:02.423906Z 82 [Note] Got an error reading communication packets
+2019-09-30T09:27:12.423916Z 85 [Note] Got an error reading communication packets
+2019-09-30T09:27:22.423876Z 86 [Note] Got an error reading communication packets
+2019-09-30T09:27:32.429866Z 88 [Note] Got an error reading communication packets
+2019-09-30T09:27:42.423898Z 89 [Note] Got an error reading communication packets
