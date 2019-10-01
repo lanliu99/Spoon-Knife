@@ -1,0 +1,150 @@
+
+NAME                                  READY     STATUS      RESTARTS   AGE
+pod/apicast-custom-policies-1-build   0/1       Completed   0          5d
+pod/apicast-example-policy-1-build    0/1       Completed   0          5d
+pod/apicast-staging-14-p59hj          1/1       Running     0          2d
+pod/backend-cron-1-vrvgf              1/1       Running     5          8d
+pod/backend-listener-1-t8vbh          1/1       Running     0          8d
+pod/backend-redis-1-8zvgp             1/1       Running     0          8d
+pod/backend-worker-1-bvfjg            1/1       Running     0          8d
+pod/system-app-3-hkzgt                3/3       Running     0          18h
+pod/system-memcache-1-p492c           1/1       Running     0          8d
+pod/system-mysql-8-9rf9v              1/1       Running     0          18h
+pod/system-redis-2-5rkg9              1/1       Running     0          18h
+pod/system-sidekiq-2-rjscg            1/1       Running     0          18h
+pod/system-sphinx-1-wn889             1/1       Running     0          8d
+pod/zync-1-t68tl                      1/1       Running     0          8d
+pod/zync-database-1-z6d5j             1/1       Running     0          8d
+pod/zync-que-2-xjk59                  1/1       Running     0          18h
+NAME                                          DESIRED   CURRENT   READY     AGE
+replicationcontroller/apicast-production-10   0         0         0         6d
+replicationcontroller/apicast-production-11   0         0         0         6d
+replicationcontroller/apicast-production-12   0         0         0         6d
+replicationcontroller/apicast-production-13   0         0         0         6d
+replicationcontroller/apicast-production-14   0         0         0         6d
+replicationcontroller/apicast-production-15   0         0         0         6d
+replicationcontroller/apicast-production-16   0         0         0         6d
+replicationcontroller/apicast-production-17   0         0         0         5d
+replicationcontroller/apicast-production-18   0         0         0         5d
+replicationcontroller/apicast-production-8    0         0         0         6d
+replicationcontroller/apicast-production-9    0         0         0         6d
+replicationcontroller/apicast-staging-10      0         0         0         6d
+replicationcontroller/apicast-staging-11      0         0         0         6d
+replicationcontroller/apicast-staging-12      0         0         0         5d
+replicationcontroller/apicast-staging-13      0         0         0         5d
+replicationcontroller/apicast-staging-14      1         1         1         2d
+replicationcontroller/apicast-staging-4       0         0         0         6d
+replicationcontroller/apicast-staging-5       0         0         0         6d
+replicationcontroller/apicast-staging-6       0         0         0         6d
+replicationcontroller/apicast-staging-7       0         0         0         6d
+replicationcontroller/apicast-staging-8       0         0         0         6d
+replicationcontroller/apicast-staging-9       0         0         0         6d
+replicationcontroller/backend-cron-1          1         1         1         8d
+replicationcontroller/backend-listener-1      1         1         1         8d
+replicationcontroller/backend-redis-1         1         1         1         8d
+replicationcontroller/backend-worker-1        1         1         1         8d
+replicationcontroller/system-app-1            0         0         0         8d
+replicationcontroller/system-app-2            0         0         0         1d
+replicationcontroller/system-app-3            1         1         1         18h
+replicationcontroller/system-memcache-1       1         1         1         8d
+replicationcontroller/system-mysql-1          0         0         0         8d
+replicationcontroller/system-mysql-2          0         0         0         1d
+replicationcontroller/system-mysql-3          0         0         0         1d
+replicationcontroller/system-mysql-4          0         0         0         1d
+replicationcontroller/system-mysql-5          0         0         0         1d
+replicationcontroller/system-mysql-6          0         0         0         19h
+replicationcontroller/system-mysql-7          0         0         0         18h
+replicationcontroller/system-mysql-8          1         1         1         18h
+replicationcontroller/system-redis-1          0         0         0         8d
+replicationcontroller/system-redis-2          1         1         1         18h
+replicationcontroller/system-sidekiq-1        0         0         0         8d
+replicationcontroller/system-sidekiq-2        1         1         1         18h
+replicationcontroller/system-sphinx-1         1         1         1         8d
+replicationcontroller/zync-1                  1         1         1         8d
+replicationcontroller/zync-database-1         1         1         1         8d
+replicationcontroller/zync-que-1              0         0         0         8d
+replicationcontroller/zync-que-2              1         1         1         18h
+NAME                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+service/apicast-production   ClusterIP   172.30.13.8      <none>        8080/TCP,8090/TCP   8d
+service/apicast-staging      ClusterIP   172.30.122.237   <none>        8080/TCP,8090/TCP   8d
+service/backend-listener     ClusterIP   172.30.191.222   <none>        3000/TCP            8d
+service/backend-redis        ClusterIP   172.30.13.196    <none>        6379/TCP            8d
+service/system-developer     ClusterIP   172.30.194.146   <none>        3000/TCP            8d
+service/system-master        ClusterIP   172.30.41.120    <none>        3000/TCP            8d
+service/system-memcache      ClusterIP   172.30.162.137   <none>        11211/TCP           8d
+service/system-mysql         ClusterIP   172.30.108.128   <none>        3306/TCP            8d
+service/system-provider      ClusterIP   172.30.44.238    <none>        3000/TCP            8d
+service/system-redis         ClusterIP   172.30.172.225   <none>        6379/TCP            8d
+service/system-sphinx        ClusterIP   172.30.46.81     <none>        9306/TCP            8d
+service/zync                 ClusterIP   172.30.147.212   <none>        8080/TCP            8d
+service/zync-database        ClusterIP   172.30.188.92    <none>        5432/TCP            8d
+NAME                                                    REVISION   DESIRED   CURRENT   TRIGGERED BY
+deploymentconfig.apps.openshift.io/apicast-production   18         0         0         config,image(amp-apicast:latest)
+deploymentconfig.apps.openshift.io/apicast-staging      14         1         1         config,image(amp-apicast:latest)
+deploymentconfig.apps.openshift.io/backend-cron         1          1         1         config,image(amp-backend:latest)
+deploymentconfig.apps.openshift.io/backend-listener     1          1         1         config,image(amp-backend:latest)
+deploymentconfig.apps.openshift.io/backend-redis        1          1         1         config,image(backend-redis:latest)
+deploymentconfig.apps.openshift.io/backend-worker       1          1         1         config,image(amp-backend:latest)
+deploymentconfig.apps.openshift.io/system-app           3          1         1         config,image(amp-system:latest)
+deploymentconfig.apps.openshift.io/system-memcache      1          1         1         config,image(system-memcached:latest)
+deploymentconfig.apps.openshift.io/system-mysql         8          1         1         config,image(system-mysql:latest)
+deploymentconfig.apps.openshift.io/system-redis         2          1         1         config,image(system-redis:latest)
+deploymentconfig.apps.openshift.io/system-sidekiq       2          1         1         config,image(amp-system:latest)
+deploymentconfig.apps.openshift.io/system-sphinx        1          1         1         config,image(amp-system:latest)
+deploymentconfig.apps.openshift.io/zync                 1          1         1         config,image(amp-zync:latest)
+deploymentconfig.apps.openshift.io/zync-database        1          1         1         config,image(zync-database-postgresql:latest)
+deploymentconfig.apps.openshift.io/zync-que             2          1         1         config,image(amp-zync:latest)
+NAME                                                     TYPE      FROM         LATEST
+buildconfig.build.openshift.io/apicast-custom-policies   Docker    Dockerfile   1
+buildconfig.build.openshift.io/apicast-example-policy    Source    Git@master   1
+NAME                                                 TYPE      FROM          STATUS     STARTED      DURATION
+build.build.openshift.io/apicast-example-policy-1    Source    Git@eae33c6   Complete   5 days ago   18s
+build.build.openshift.io/apicast-custom-policies-1   Docker    Dockerfile    Complete   5 days ago   10s
+NAME                                                      DOCKER REPO                                                    TAGS         UPDATED
+imagestream.image.openshift.io/amp-apicast                docker-registry.default.svc:5000/gw/amp-apicast                latest,2.6   5 days ago
+imagestream.image.openshift.io/amp-backend                docker-registry.default.svc:5000/gw/amp-backend                2.6,latest   8 days ago
+imagestream.image.openshift.io/amp-system                 docker-registry.default.svc:5000/gw/amp-system                 2.6,latest   8 days ago
+imagestream.image.openshift.io/amp-zync                   docker-registry.default.svc:5000/gw/amp-zync                   latest,2.6   8 days ago
+imagestream.image.openshift.io/apicast-policy             docker-registry.default.svc:5000/gw/apicast-policy             example      5 days ago
+imagestream.image.openshift.io/backend-redis              docker-registry.default.svc:5000/gw/backend-redis              latest,2.6   8 days ago
+imagestream.image.openshift.io/system-memcached           docker-registry.default.svc:5000/gw/system-memcached           2.6,latest   8 days ago
+imagestream.image.openshift.io/system-mysql               docker-registry.default.svc:5000/gw/system-mysql               2.6,latest   8 days ago
+imagestream.image.openshift.io/system-redis               docker-registry.default.svc:5000/gw/system-redis               2.6,latest   8 days ago
+imagestream.image.openshift.io/zync-database-postgresql   docker-registry.default.svc:5000/gw/zync-database-postgresql   2.6,latest   8 days ago
+NAME                                                  HOST/PORT                                                 PATH      SERVICES             PORT      TERMINATION     WILDCARD
+route.route.openshift.io/backend                      backend-3scale.apps.paas-test.eubrmb.com                            backend-listener     http      edge/Allow      None
+route.route.openshift.io/zync-3scale-api-4jwx2        api-dpq2.apps.paas-test.eubrmb.com                                  apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-67kvr        HostAlreadyClaimed                                                  apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-69kfc        api-ipqa-apicast-production.apps.paas-test.eubrmb.com               apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-77x4h        ipgw01q-staging.ipgwq.svc.cluster.local                             apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-8lcl9        api-ipdev-apicast-staging.apps.paas-test.eubrmb.com                 apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-bhnf9        api-ipdev-apicast-production.apps.paas-test.eubrmb.com              apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-bqpc7        api-3scale-apicast-staging.apps.paas-test.eubrmb.com                apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-cjttn        HostAlreadyClaimed                                                  apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-fg76t        api-dpq.apps.paas-test.eubrmb.com                                   apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-gbm4d        api-dpdev-apicast-staging.apps.paas-test.eubrmb.com                 apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-h6fxl        api-dev-apicast-production.apps.paas-test.eubrmb.com                apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-ndrsw        api-dpqa-apicast-staging.apps.paas-test.eubrmb.com                  apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-nzdrf        api.dpdev.apps.paas-test.eubrmb.com                                 apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-pg2v9        api-dpqa-apicast-production.apps.paas-test.eubrmb.com               apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-px87h        api-dev-apicast-staging.apps.paas-test.eubrmb.com                   apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-q6krp        api-3scale-apicast-production.apps.paas-test.eubrmb.com             apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-qmltq        api2.eubrmb.com                                                     apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-vdmdg        dpq2-api.apps.paas-test.eubrmb.com                                  apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-vwpnk        api-dpdev-apicast-production.apps.paas-test.eubrmb.com              apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-whkxg        dpq-api.apps.paas-test.eubrmb.com                                   apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-xqjl5        apiq2.eubrmb.com                                                    apicast-staging      gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-api-z5gcw        api.dpqa.apps.paas-test.eubrmb.com                                  apicast-production   gateway   edge/Redirect   None
+route.route.openshift.io/zync-3scale-master-hljzm     master.apps.paas-test.eubrmb.com                                    system-master        http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-ckv72   ipdev.apps.paas-test.eubrmb.com                                     system-developer     http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-dgtqg   dpdev-admin.apps.paas-test.eubrmb.com                               system-provider      http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-g52jc   dpqa.apps.paas-test.eubrmb.com                                      system-developer     http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-jzp66   ipqa.apps.paas-test.eubrmb.com                                      system-developer     http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-ph626   dev.apps.paas-test.eubrmb.com                                       system-developer     http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-q6fxt   dpdev.apps.paas-test.eubrmb.com                                     system-developer     http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-th99f   dev-admin.apps.paas-test.eubrmb.com                                 system-provider      http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-tvmvs   ipqa-admin.apps.paas-test.eubrmb.com                                system-provider      http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-v9p65   3scale.apps.paas-test.eubrmb.com                                    system-developer     http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-vmqh7   dpqa-admin.apps.paas-test.eubrmb.com                                system-provider      http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-wtwdl   3scale-admin.apps.paas-test.eubrmb.com                              system-provider      http      edge/Redirect   None
+route.route.openshift.io/zync-3scale-provider-z7jzk   ipdev-admin.apps.paas-test.eubrmb.com                               system-provider      http      edge/Redirect   None

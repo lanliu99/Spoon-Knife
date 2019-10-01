@@ -1,0 +1,16 @@
+NAME                             READY     STATUS    RESTARTS   AGE
+pod/dpgw01q-production-1-hnhv6   1/1       Running   0          7d
+pod/dpgw01q-staging-2-md6fb      1/1       Running   0          2d
+NAME                                         DESIRED   CURRENT   READY     AGE
+replicationcontroller/dpgw01q-production-1   1         1         1         7d
+replicationcontroller/dpgw01q-staging-1      0         0         0         7d
+replicationcontroller/dpgw01q-staging-2      1         1         1         2d
+NAME                         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
+service/dpgw01q-production   ClusterIP   172.30.16.170   <none>        8080/TCP,8090/TCP   7d
+service/dpgw01q-staging      ClusterIP   172.30.54.146   <none>        8080/TCP,8090/TCP   7d
+NAME                                                    REVISION   DESIRED   CURRENT   TRIGGERED BY
+deploymentconfig.apps.openshift.io/dpgw01q-production   1          1         1         config
+deploymentconfig.apps.openshift.io/dpgw01q-staging      2          1         1         config
+NAME                                          HOST/PORT                                            PATH      SERVICES             PORT      TERMINATION   WILDCARD
+route.route.openshift.io/dpgw01q-production   dpgw01q-production-dpgwq.apps.paas-test.eubrmb.com             dpgw01q-production   proxy                   None
+route.route.openshift.io/dpgw01q-staging      dpgw01q-staging-dpgwq.apps.paas-test.eubrmb.com                dpgw01q-staging      proxy                   None
