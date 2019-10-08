@@ -1,2 +1,2 @@
 The current date is: 10/08/2019 Tue 
-Enter the new date: (mm-dd-yy) 
+xxxEnter the new date: (mm-dd-yy) 
